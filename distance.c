@@ -11,7 +11,7 @@ float distance_calculator(float x1,float x2, float y1, float y2)
 int main()
 {
   float result,a,b,c,d;
-  printf("\nEnter the coordinates of point A:\n"):
+  printf("\nEnter the coordinates of point A:\n");
   printf("\nX-Axis Coordinate:\t");
   scanf("%f,&b");
   printf("\nENter the coordinates of point B:\n");
