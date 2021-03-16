@@ -18,7 +18,7 @@ float distance (float x1,float y1,float x2,float y2)
   return dis;
 }
 
-void output (lfoat dis)
+void output (float dis)
 {
   printf("Distance between (x1,y1) and (x2,y2) is: %0.2f",dis);
 }
