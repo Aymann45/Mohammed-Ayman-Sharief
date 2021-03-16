@@ -20,7 +20,7 @@ int main()
   printf("\nY-Axis coordinate:\t");
   scanf("%f",&d);
   result=distance_calculator(a,b,c,d);
-  printf("\ndistance between points A nad B=%f\n",result);
+  printf("\ndistance between points A and B=%f\n",result);
   return 0;
 }
   
