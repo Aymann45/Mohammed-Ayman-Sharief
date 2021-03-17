@@ -1,25 +1,23 @@
-//WAP to find the sum of two fractions.
-#include<stdio.h>
-#include<conio.h>
-typeof struct
-{
-  int num;
-  int deno;
-}
-fract;
-fract sum(fract.fract);
+#include <stdio.h>
 int main()
 {
-  int num1,deno1,num2,deno2;
-  printf("Enter 1st fraction=numerator and denominator");
-  scanf("%d%d",&num1,&deno1);
-  printf("Enter 2nd fraction= numerator and denominator");
-  scanf("%d,%d",&num2,deno2);
-  fract f1={num1,deno1};
-  fract f2={num2,deno2};
-  fract result=sum(f1,f2);
-  printf("Result=%d%d",result,num,result,deno);
-  getch();
-  return 0;
+int a, b,c,d,x,y,i,gcd;
+printf("\nEnter the numerator for 1st number : ");
+scanf("%d",&a);
+printf("\nEnter the denominator for 1st number : ");
+scanf("%d",&b);
+printf("\nEnter the numerator for 2nd number : ");
+scanf("%d",&c);
+printf("\nEnter the denominator for 2nd number : ");
+scanf("%d",&d);
+x=(a*d)+(b*c); 
+y=b*d; 
+for(i=1; i <= x && i <= y; ++i)
+{
+if(x%i==0 && y%i==0)
+gcd = i;
 }
-         
+printf("\nThe added fraction is %d/%d ",x/gcd,y/gcd);
+printf("\n");
+return 0;
+}
