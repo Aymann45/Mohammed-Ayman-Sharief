@@ -25,3 +25,4 @@ void output(float n)
  z=sum(x,y);
  output(z);
  return 0;
+ }
