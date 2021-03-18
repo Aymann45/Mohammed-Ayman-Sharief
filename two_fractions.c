@@ -1,23 +1,46 @@
-#include <stdio.h>
+#include<stdio.h>
+struct fraction
+{
+ int num;
+ int den;
+};
+typedef struct fraction fract;
+ fract input()
+{
+ fract f;
+printf("enter the numerator:\n");
+scanf("%d",&f.num);
+printf("enter the denominator:\n");
+scanf("%d",&f.den);
+return f;
+}
+fract compute(fract f1,fract f2)
+{
+int hcf,i,numer ,denom;
+numer=(f1.num*f2.den)+(f1.den*f2.num);
+denom=f1.den*f2.den;
+for(i=1;i<numer && i<=denom;++i)
+{
+if(numer%i==0&&denom%i==0)
+{
+hcf=i;
+}
+}
+fract sum;
+sum.num=numer/hcf;
+sum.den=denom/hcf;
+return sum;
+}
+void output(fract sum)
+{
+printf("The added fraction is %d/%d",sum.num,sum.den);
+}
 int main()
 {
-int a, b,c,d,x,y,i,gcd;
-printf("\nEnter the numerator for 1st number : ");
-scanf("%d",&a);
-printf("\nEnter the denominator for 1st number : ");
-scanf("%d",&b);
-printf("\nEnter the numerator for 2nd number : ");
-scanf("%d",&c);
-printf("\nEnter the denominator for 2nd number : ");
-scanf("%d",&d);
-x=(a*d)+(b*c); 
-y=b*d; 
-for(i=1; i <= x && i <= y; ++i)
-{
-if(x%i==0 && y%i==0)
-gcd = i;
-}
-printf("\nThe added fraction is %d/%d ",x/gcd,y/gcd);
-printf("\n");
+fract f1,f2,sum;
+f1=input();
+f2=input();
+sum=compute(f1,f2);
+output(sum);
 return 0;
 }
